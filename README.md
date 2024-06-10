@@ -36,7 +36,7 @@ With these requirements in hand, you’ll be well-equipped to build your own por
             <ul>
                 <li><em>Format the MicroSD Card:</em> Use a tool like <a href="https://www.sdcard.org/downloads/formatter/">SD Card Formatter</a> to format the microSD card.</li>
                 <li><em>Flash the Image:</em> Use a tool like <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> to flash the downloaded OpenWrt image onto the microSD card. Insert the microSD card into your computer, and open Raspberry Pi Imager. Select Raspberry Pi 4 as the Raspberry Pi Device, the OpenWrt image for the Operating System, and your SD Card for Storage and click "Next". You might be asked if you want to apply custom settings, click "No" and your SD card will be flashed with OpenWrt.</li>
-		    <img src="https://i.imgur.com/AikaSN8.png" height="50%" width="50%" alt="Raspbery Pi Imager">
+		    <img src="https://i.imgur.com/AikaSN8.png" height="70%" width="70%" alt="Raspbery Pi Imager">
             </ul>
         </li>
         <li><strong>Insert the MicroSD Card:</strong> Once the flashing process is complete, remove the microSD card from your computer and insert it into the Raspberry Pi 4B.</li>
@@ -49,7 +49,7 @@ With these requirements in hand, you’ll be well-equipped to build your own por
         <li><strong>Initial Setup:</strong>
             <ul>
                 <li><em>Connect to the Raspberry Pi:</em> On your computer, log into the Pi via SSH using the default IP address for OpenWrt, <code>root@192.168.1.1</code>. Assuming your home router is not using 192.168.1.1 as its IP address already, you should have no issue loggin into your pi this way. In case it is, there are several work arounds. The easiest in my opinion is to simply disconnect from home router and then logging into your Raspberry Pi.</li>
-		<img src="https://i.imgur.com/uZVwlMP.png" height="50%" width="50%" alt="OpenWrt">
+		<img src="https://i.imgur.com/uZVwlMP.png" height="70%" width="70%" alt="OpenWrt">
             </ul>
         </li>
     </ol>
@@ -68,12 +68,12 @@ With these requirements in hand, you’ll be well-equipped to build your own por
 			<ul>
 				<li>Having made the back up files of our config files, we can now begin to customize them to get our router working by entering the command <code>vi network</code>. Update the 'lan' interface and add the 'wwan', and 'vpnclient' interfaces to the file as shown below. Remember when choosing your own IP address for the 'lan' interface, make sure it is within a private IP address range.</li>
 				<li>Since we are using Vim to edit the file, hit the letter 'i' on your keyboard to begin and once your done, 'esc' key and type ':wq' to save your work and close Vim.</li>
-				<img src="https://i.imgur.com/qXvEXyf.png" height="50%" width="50%" alt="Network File">
+				<img src="https://i.imgur.com/qXvEXyf.png" height="70%" width="70%" alt="Network File">
 			</ul>
 		<li><strong>Configure the Firewall File:</strong> </li>
 			<ul>
 				<li>Similar to what we did in the network file, we will also edit the firewall file, but we will only be changing one value. We will change option input 'REJECT' to 'ACCEPT' under config zone 'wan'. <code>vi firewall</code> will open our file, 'i' key to make our update, and 'esc' key then ':wq' to save and exit.</li>
-				<img src="https://i.imgur.com/RqWwOkW.png" height="50%" width="50%" alt="Firewall File">
+				<img src="https://i.imgur.com/RqWwOkW.png" height="70%" width="70%" alt="Firewall File">
 				<li>You have now successfully updated the necessary config files, now reboot the pi with the <code>reboot</code> command and continue onto the next step.</li>
 			</ul>
 	</ol>
@@ -85,7 +85,7 @@ With these requirements in hand, you’ll be well-equipped to build your own por
 				<li><code>cd /etc/config</code></li>
 				<li><code>vi wireless</code></li>
 				<li>Update config wifi-device 'radio0' to use the settings below:</li>
-				<img src="https://i.imgur.com/YbI5RD6.png" height="50%" width="50%" alt="radio0">
+				<img src="https://i.imgur.com/YbI5RD6.png" height="70%" width="70%" alt="radio0">
 				<li><code>uci commit wireless</code></li>
 				<li><code>wifi</code></li>
 				<li>You can verify you completed this step successfully if you see "OperWrt" as an availiable Wifi network.</li>
@@ -94,7 +94,7 @@ With these requirements in hand, you’ll be well-equipped to build your own por
 			<ul>
 				<li>Click on Network > Wireless then using the 'radio0' click 'Scan'</li>
 				<li>Log into your your Wifi network and make sure to mark 'Replace wireless configuration', then click Save.</li>
-				<img src="https://i.imgur.com/abdxFvg.png" height="50%" width="50%" alt="Wifi">
+				<img src="https://i.imgur.com/abdxFvg.png" height="70%" width="70%" alt="Wifi">
 				<li>Click "Save & Apply".</li>
 				<li>Your Raspberry Pi is now a functioning router, however it is not secured just yet. I would not recommend stopping here as the whole purpose of this project is to add security to your Internet access while traveling.</li>
 			</ul>
@@ -111,7 +111,7 @@ With these requirements in hand, you’ll be well-equipped to build your own por
 				<li>Once the USB Wirelss adapter is plugged in run <code>ifconfig wlan1 up</code></li>
 				<li>Update the wireless config file to apply your own wifi SSID and password.</li>
 				<li><code>vi /etc/config/wireless</code></li>
-				<img src="https://i.imgur.com/opUXLvB.png" height="50%" width="50%" alt="Wifi Config">
+				<img src="https://i.imgur.com/opUXLvB.png" height="70%" width="70%" alt="Wifi Config">
 				<li><code>uci commit wireless</code></li>
 				<li><code>wifi</code></li>
 			</ul>	
