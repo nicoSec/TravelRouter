@@ -85,7 +85,7 @@ With these requirements in hand, you’ll be well-equipped to build your own por
 				<li><code>cd /etc/config</code></li>
 				<li><code>vi wireless</code></li>
 				<li>Update config wifi-device 'radio0' to use the settings below:</li>
-				<img src="https://i.imgur.com/YbI5RD6.png" height="70%" width="70%" alt="radio0">
+				<img src="https://i.imgur.com/0LXhRYg.png" height="70%" width="70%" alt="radio0">
 				<li><code>uci commit wireless</code></li>
 				<li><code>wifi</code></li>
 				<li>You can verify you completed this step successfully if you see "OperWrt" as an availiable Wifi network.</li>
