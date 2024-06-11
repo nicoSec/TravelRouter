@@ -171,7 +171,7 @@ With these requirements in hand, you’ll be well-equipped to build your own por
 			</ul>
 		<li><strong>Firewall Configuration Script:</strong> Copy this script and run it in your Pi's command line.</li>
 			<ul>	
-				<li>ci rename firewall.@zone[0]="lan"<br>
+				<li>uci rename firewall.@zone[0]="lan"<br>
 				uci rename firewall.@zone[1]="wan"<br>
 				uci del_list firewall.wan.device="tun+"<br>
 				uci add_list firewall.wan.device="tun+"<br>
