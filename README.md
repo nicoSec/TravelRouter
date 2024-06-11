@@ -7,7 +7,7 @@ Creating a portable router can be a game-changer for anyone seeking secure, priv
 <h2>Hardware Requirements</h2>
 	<ul>
 		<li>Raspberry Pi 4b: The central piece of hardware for your portable router.</li>
-		<li>MicroSD Card (16GB or higher: For storing the OpenWrt operating system and configuration files.</li>
+		<li>MicroSD Card (16GB or higher): For storing the OpenWrt operating system and configuration files.</li>
 		<li>Power Supply: A reliable power source for your Raspberry Pi 4.</li>
 		<li>Ethernet Cable: For connecting the Raspberry Pi to a wired network.</li>
 		<li>Wireless WiFi USB Adapter: To enable WiFi on your Raspberry Pi router.</li>
